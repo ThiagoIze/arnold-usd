@@ -434,7 +434,7 @@ elif env['_COMPILER'] == 'msvc':
     env.Append(CCFLAGS=Split('/D "NOMINMAX" /Zc:inline-'))
     # Optimization/profile/debug flags
     if env['MODE'] == 'opt':
-        env.Append(CCFLAGS=Split('/O2 /Oi /Ob2 /MD'))
+        env.Append(CCFLAGS=Split('/O2 /Oi /Ob2 /MD /Z7'))
         env.Append(CPPDEFINES=Split('NDEBUG'))
     elif env['MODE'] == 'profile':
         env.Append(CCFLAGS=Split('/Ob2 /MD /Zi'))
